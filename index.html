@@ -906,21 +906,22 @@
         <div><span>Studio — </span>Pune, Maharashtra</div>
       </div>
     </div>
-    <form onsubmit="event.preventDefault(); this.querySelector('.submit-btn').textContent='Sent — thank you';">
+    <form id="contactForm" action="https://formspree.io/f/xvgewdlo" method="POST">
       <div class="field">
         <label for="name">Your name</label>
-        <input id="name" type="text" required placeholder="Full name">
+        <input id="name" name="name" type="text" required placeholder="Full name">
       </div>
       <div class="field">
         <label for="email">Email</label>
-        <input id="email" type="email" required placeholder="you@company.com">
+        <input id="email" name="email" type="email" required placeholder="you@company.com">
       </div>
       <div class="field">
         <label for="project">What are you building?</label>
-        <textarea id="project" required placeholder="A new site, a redesign, an online store..."></textarea>
+        <textarea id="project" name="message" required placeholder="A new site, a redesign, an online store..."></textarea>
       </div>
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
       <button class="submit-btn" type="submit">Send message</button>
-      <!-- <p class="form-note">Connect this form to your email or CRM before publishing — it's static for now.</p> -->
+      <p class="form-note" id="formStatus">We'll get back to you within one working day.</p>
     </form>
   </div>
 </section>
